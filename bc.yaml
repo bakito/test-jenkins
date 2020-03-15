@@ -1,0 +1,13 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "sample-pipeline"
+  annotations:
+    jenkins.openshift.io/autostart: "true"
+spec:
+  source:
+    git:
+      uri: "https://github.com/bakito/test-jenkins.git"
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: "." 
